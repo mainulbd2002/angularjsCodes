@@ -15,7 +15,8 @@ var TutorialComponent = (function () {
     TutorialComponent = __decorate([
         core_1.Component({
             selector: 'my-tutorial',
-            template: '<h2>Example tutorials</h2>'
+            template: "<h2>Example tutorials</h2>\n\t\t\t\t<h4>Example header from tutorial component</h4>",
+            styles: ["h4 {\n\t\tcolor: red;\n\t}"]
         }), 
         __metadata('design:paramtypes', [])
     ], TutorialComponent);
