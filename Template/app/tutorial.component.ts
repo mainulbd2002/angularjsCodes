@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
 				<h4>{{title}}</h4>
 				<img [src] ="imgLink">
 				<div [class.myClass] = "applyClass">Apply class</div>
-				<div [style.color] = "applyBlue ? 'blue': 'orange'">Apply color</div>`,
+				<div [style.color] = "applyBlue ? 'blue': 'orange'">Apply color</div>
+				<button (click) = "onClick(demoInput.value)">Click Me</button>
+				<input type="text" #demoInput>`,
 	styles: [`.myClass {
 		color: red;
 	}`]
@@ -18,5 +20,13 @@ export class TutorialComponent{
 	public imgLink = "http://lorempixel.com/400/200";
 	public applyClass = false;
 	public applyBlue = true;
+	public onClick(value){
+		
+		if (value != null && value !== undefined)
+			console.log("Button Clicked .. "+value);
+		else
+			console.log("Button clicked");
+
+	}
 }
 
