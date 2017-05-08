@@ -11,7 +11,19 @@ import { Component } from '@angular/core';
 				<input type="text" #demoInput><br>
 				<input type="text" [(ngModel)] = "fName">
 				<input type="text" [(ngModel)] = "lName">
-				Full Name : {{fName}} {{lName}}`,
+				Full Name : {{fName}} {{lName}}
+				<p *ngIf = "showElement">Showing Element</p><br>
+				<input type="text" [(ngModel)] = "color">
+				<div [ngSwitch] = "color">
+					<p *ngSwitchWhen="'red'">Red is selected</p>
+					<p *ngSwitchWhen="'blue'">Blue is selected</p>
+					<p *ngSwitchWhen="'green'">Green is selected</p>
+					<p *ngSwitchWhen="'yellow'">Yellow is selected</p>
+					<p *ngSwitchDefault>Select Valid color</p>
+				</div>
+				<ul>
+					<li *ngFor="let c of colorlist">{{c}}</li>
+				</ul>`,
 	styles: [`.myClass {
 		color: red;
 	}`]
@@ -33,5 +45,8 @@ export class TutorialComponent{
 	}
 	public fName;
 	public lName;
+	public showElement = true;
+	public color;
+	public colorlist = ['red','green','blue'];
 }
 
