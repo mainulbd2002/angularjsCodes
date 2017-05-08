@@ -13,11 +13,14 @@ var TutorialComponent = (function () {
     function TutorialComponent() {
         this.title = "Example header from Mainuls tutorial component";
         this.imgLink = "http://lorempixel.com/400/200";
+        this.applyClass = false;
+        this.applyBlue = true;
     }
     TutorialComponent = __decorate([
         core_1.Component({
             selector: 'my-tutorial',
-            template: "<h2>Example tutorials</h2>\n\t\t\t\t<h4>{{title}}</h4>\n\t\t\t\t<img [src] =\"imgLink\">"
+            template: "<h2>Example tutorials</h2>\n\t\t\t\t<h4>{{title}}</h4>\n\t\t\t\t<img [src] =\"imgLink\">\n\t\t\t\t<div [class.myClass] = \"applyClass\">Apply class</div>\n\t\t\t\t<div [style.color] = \"applyBlue ? 'blue': 'orange'\">Apply color</div>",
+            styles: [".myClass {\n\t\tcolor: red;\n\t}"]
         }), 
         __metadata('design:paramtypes', [])
     ], TutorialComponent);
