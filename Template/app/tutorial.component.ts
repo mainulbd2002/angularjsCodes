@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 				<div [class.myClass] = "applyClass">Apply class</div>
 				<div [style.color] = "applyBlue ? 'blue': 'orange'">Apply color</div>
 				<button (click) = "onClick(demoInput.value)">Click Me</button>
-				<input type="text" #demoInput>`,
+				<input type="text" #demoInput><br>
+				<input type="text" [(ngModel)] = "fName">
+				<input type="text" [(ngModel)] = "lName">
+				Full Name : {{fName}} {{lName}}`,
 	styles: [`.myClass {
 		color: red;
 	}`]
@@ -28,5 +31,7 @@ export class TutorialComponent{
 			console.log("Button clicked");
 
 	}
+	public fName;
+	public lName;
 }
 

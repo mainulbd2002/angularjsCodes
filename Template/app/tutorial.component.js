@@ -25,7 +25,7 @@ var TutorialComponent = (function () {
     TutorialComponent = __decorate([
         core_1.Component({
             selector: 'my-tutorial',
-            template: "<h2>Example tutorials</h2>\n\t\t\t\t<h4>{{title}}</h4>\n\t\t\t\t<img [src] =\"imgLink\">\n\t\t\t\t<div [class.myClass] = \"applyClass\">Apply class</div>\n\t\t\t\t<div [style.color] = \"applyBlue ? 'blue': 'orange'\">Apply color</div>\n\t\t\t\t<button (click) = \"onClick(demoInput.value)\">Click Me</button>\n\t\t\t\t<input type=\"text\" #demoInput>",
+            template: "<h2>Example tutorials</h2>\n\t\t\t\t<h4>{{title}}</h4>\n\t\t\t\t<img [src] =\"imgLink\">\n\t\t\t\t<div [class.myClass] = \"applyClass\">Apply class</div>\n\t\t\t\t<div [style.color] = \"applyBlue ? 'blue': 'orange'\">Apply color</div>\n\t\t\t\t<button (click) = \"onClick(demoInput.value)\">Click Me</button>\n\t\t\t\t<input type=\"text\" #demoInput><br>\n\t\t\t\t<input type=\"text\" [(ngModel)] = \"fName\">\n\t\t\t\t<input type=\"text\" [(ngModel)] = \"lName\">\n\t\t\t\tFull Name : {{fName}} {{lName}}",
             styles: [".myClass {\n\t\tcolor: red;\n\t}"]
         }), 
         __metadata('design:paramtypes', [])
